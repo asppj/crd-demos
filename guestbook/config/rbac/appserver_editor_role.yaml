@@ -1,0 +1,24 @@
+# permissions for end users to edit appservers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: appserver-editor-role
+rules:
+- apiGroups:
+  - app-group.book.asppj.top
+  resources:
+  - appservers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - app-group.book.asppj.top
+  resources:
+  - appservers/status
+  verbs:
+  - get

@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - app-group.book.asppj.top
+  resources:
+  - appservers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - app-group.book.asppj.top
+  resources:
+  - appservers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - app-group.book.asppj.top
+  resources:
+  - appservers/status
+  verbs:
+  - get
+  - patch
+  - update

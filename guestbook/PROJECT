@@ -1,0 +1,16 @@
+domain: book.asppj.top
+layout:
+- go.kubebuilder.io/v3
+projectName: guestbook
+repo: github.com/asppj/guessbook
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: book.asppj.top
+  group: app-group
+  kind: AppServer
+  path: github.com/asppj/guessbook/api/v1
+  version: v1
+version: "3"

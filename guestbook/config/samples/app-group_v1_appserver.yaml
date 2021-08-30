@@ -1,0 +1,9 @@
+apiVersion: app-group.book.asppj.top/v1
+kind: AppServer
+metadata:
+  name: appserver-sample
+spec:
+  # Add fields here
+  size: 10
+  configMapName: demo-configmap
+  alias: Phone
